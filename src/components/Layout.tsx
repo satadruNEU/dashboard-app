@@ -389,10 +389,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-[#0A0A0A]">
       {/* Sidebar */}
       <motion.aside
-        className="fixed top-0 left-0 z-40 h-screen bg-[#111111]"
+        className="fixed top-0 left-0 z-40 h-screen"
         initial={{ width: 240 }}
         animate={{ width: sidebarOpen ? 240 : 60 }}
         transition={{ duration: 0.2 }}
+        // style={{ backgroundColor: '#141415' }}
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between h-12 px-3 pt-4 pl-4">
@@ -459,17 +460,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           }}>
             <div className="w-[200px]" /> {/* Spacer for left side */}
             
-            <div className="absolute left-1/3 -translate-x-[30rem] w-full max-w-2xl">
-              <div className="relative flex items-center">
-                <div className="absolute left-2 flex items-center justify-center w-4 h-4">
-                  <Search className="w-4 h-4 text-opacity-40 text-white" />
+            <div className="flex-1 flex justify-center"
+            style={{
+              marginLeft: "16rem"
+            }}>
+              <div className="w-full max-w-2xl">
+                <div className="relative flex items-center">
+                  <div className="absolute left-2 flex items-center justify-center w-4 h-4">
+                    <Search className="w-4 h-4 text-opacity-40 text-white" />
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Search for campaigns, influencers..."
+                    className="w-full h-8 pl-8 pr-3 text-sm bg-opacity-5 bg-white text-white placeholder:text-opacity-40 placeholder:text-white rounded-md focus:outline-none focus:ring-1 focus:ring-opacity-20 focus:ring-white"
+                    onClick={() => setSearchOpen(true)}
+                  />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Search for campaigns, influencers..."
-                  className="w-full h-8 pl-8 pr-3 text-sm bg-opacity-5 bg-white text-white placeholder:text-opacity-40 placeholder:text-white rounded-md focus:outline-none focus:ring-1 focus:ring-opacity-20 focus:ring-white"
-                  onClick={() => setSearchOpen(true)}
-                />
               </div>
             </div>
 
