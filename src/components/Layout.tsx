@@ -7,7 +7,6 @@ import {
   Settings, 
   Bell, 
   Search, 
-  ChevronDown, 
   PanelRightClose,
   PanelRightOpen,
   Plus,

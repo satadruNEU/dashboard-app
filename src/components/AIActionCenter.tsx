@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertCircle, TrendingUp, Brain, X, Check, Bell, ArrowRight } from 'lucide-react';
+import { AlertCircle, TrendingUp, Brain, X, Check, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 interface Alert {
@@ -144,7 +144,7 @@ function DetailsModal({ isOpen, onClose, alert, onAction }: {
   );
 }
 
-function Toast({ message, isVisible, type }: { message: string; isVisible: boolean; type: 'success' | 'info' }) {
+function Toast({ message, isVisible }: { message: string; isVisible: boolean }) {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -228,8 +228,7 @@ function AlertCard({ alert }: { alert: Alert }) {
 
       <Toast 
         message={toastMessage} 
-        isVisible={showToast} 
-        type="success"
+        isVisible={showToast}
       />
     </>
   );

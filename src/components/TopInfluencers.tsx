@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, Star, Plus, Filter, Send, Youtube, Instagram, X, Check, ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Clock, Filter, Send, Youtube, Instagram, X, Check, ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
 interface Influencer {
@@ -102,7 +102,7 @@ const influencers: Influencer[] = [
   }
 ];
 
-function Toast({ message, isVisible, onClose }: { message: string; isVisible: boolean; onClose: () => void }) {
+function Toast({ message, isVisible }: { message: string; isVisible: boolean }) {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -284,7 +284,6 @@ function InfluencerCard({ influencer }: { influencer: Influencer }) {
       <Toast 
         message="Message sent successfully" 
         isVisible={showToast} 
-        onClose={() => setShowToast(false)} 
       />
     </>
   );
