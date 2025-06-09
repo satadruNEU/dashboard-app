@@ -458,7 +458,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           style={{paddingBottom: 0,
             marginBottom: 6
           }}>
-            <div className="w-[200px]" /> {/* Spacer for left side */}
+            {/* <div className="w-[200px]" /> Spacer for left side */}
             
             <div className="flex-1 flex justify-center ml-64">
               <div className="w-full max-w-2xl">
