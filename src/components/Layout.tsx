@@ -460,10 +460,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           }}>
             <div className="w-[200px]" /> {/* Spacer for left side */}
             
-            <div className="flex-1 flex justify-center"
-            style={{
-              marginLeft: "16rem"
-            }}>
+            <div className="flex-1 flex justify-center ml-64">
               <div className="w-full max-w-2xl">
                 <div className="relative flex items-center">
                   <div className="absolute left-2 flex items-center justify-center w-4 h-4">
