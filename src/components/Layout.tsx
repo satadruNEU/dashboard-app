@@ -433,7 +433,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <a
                 key={item.name}
                 href={item.href}
-                className={`flex items-center w-[224px] h-8 px-2 py-1.5 rounded-[6px] transition-colors ${
+                className={`flex items-center h-8 px-2 py-1.5 rounded-[6px] transition-colors ${
                   item.active 
                     ? 'bg-opacity-5 bg-white text-white' 
                     : 'text-opacity-60 text-white hover:text-white hover:bg-opacity-5 hover:bg-white'
