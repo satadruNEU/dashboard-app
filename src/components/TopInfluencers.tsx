@@ -331,10 +331,10 @@ export default function TopInfluencers() {
 
   return (
     <section>
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-xs font-medium uppercase text-opacity-60 text-white">Top Influencers</h2>
-          <p className="text-sm text-opacity-40 text-white mt-1">Discover and connect with top creators</p>
+          <h2 className="text-xs font-semibold tracking-wide uppercase text-opacity-80 text-white">Top Influencers</h2>
+          <p className="text-sm text-opacity-60 text-white mt-1.5">Discover and connect with top creators</p>
         </div>
         <div className="flex items-center space-x-2">
           <div className="relative">

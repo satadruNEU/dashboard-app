@@ -113,10 +113,10 @@ export default function CampaignPerformance() {
 
   return (
     <section>
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-xs font-medium uppercase text-opacity-60 text-white">Campaign Performance</h2>
-          <p className="text-sm text-opacity-40 text-white mt-1">Overview of your campaign metrics</p>
+          <h2 className="text-xs font-semibold tracking-wide uppercase text-opacity-80 text-white">Campaign Performance</h2>
+          <p className="text-sm text-opacity-60 text-white mt-1.5">Overview of your campaign metrics</p>
         </div>
         <div className="flex items-center gap-3">
           <div className="relative">

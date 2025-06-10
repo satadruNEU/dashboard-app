@@ -48,6 +48,11 @@ The dashboard is deployed and available at: [https://dashboard-app-inf.vercel.ap
   - Radix UI
   - Heroicons
   - Lucide React
+- **Design System**: Custom internal design system with reusable components
+  - Button, Card, Typography, Input, Select, Modal, Badge
+  - Consistent theming and styling
+  - Accessibility-first components
+  - Comprehensive documentation
 - **Animations**: Framer Motion
 - **State Management**: React Hooks
 - **Code Quality**: ESLint, TypeScript
@@ -95,6 +100,10 @@ src/
 │   ├── AIActionCenter.tsx  # AI-powered action center
 │   ├── TopInfluencers.tsx  # Influencer management
 │   └── CampaignPerformance.tsx  # Campaign analytics
+├── design-system/     # Internal design system
+│   ├── components/    # Reusable UI components
+│   ├── styles/        # Theme and styling utilities
+│   └── docs/         # Component documentation
 ├── assets/            # Static assets
 ├── main.tsx          # Application entry point
 └── App.tsx           # Root component

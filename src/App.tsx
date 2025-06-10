@@ -23,9 +23,9 @@ function App() {
   return (
     <Layout onLogout={handleLogout}>
       <div className="space-y-8">
-        <CampaignPerformance />
-        <TopInfluencers />
-        <AIActionCenter />
+      <CampaignPerformance />
+      <TopInfluencers />
+      <AIActionCenter />
       </div>
     </Layout>
   );

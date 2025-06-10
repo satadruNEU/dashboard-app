@@ -105,7 +105,7 @@ function ProfileDropdown({ isOpen, onClose, onLogout }: { isOpen: boolean; onClo
 
         <div className="h-px bg-opacity-10 bg-white"></div>
 
-        <div className="p-1.5">
+        {/* <div className="p-1.5">
           <div className="flex h-8 items-center px-1.5">
             <span className="text-sm font-medium text-opacity-60 text-white">Preferences</span>
           </div>
@@ -123,7 +123,7 @@ function ProfileDropdown({ isOpen, onClose, onLogout }: { isOpen: boolean; onClo
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="h-px bg-opacity-10 bg-white"></div>
 
@@ -302,7 +302,8 @@ function SearchDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
         className="absolute left-1/3 -translate-x-[30rem] top-14 border border-opacity-10 border-white rounded-xl shadow-lg overflow-hidden"
         style={{
           backgroundColor: '#141415',
-          width: '32rem',
+          width: '42rem',
+          borderRadius: '6px'
         }}
         onClick={e => e.stopPropagation()}
       >
@@ -470,16 +471,16 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
             
             <div className="flex-1 flex justify-center ml-64">
               <div className="w-full max-w-2xl">
-                <div className="relative flex items-center">
-                  <div className="absolute left-2 flex items-center justify-center w-4 h-4">
-                    <Search className="w-4 h-4 text-opacity-40 text-white" />
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Search for campaigns, influencers..."
-                    className="w-full h-8 pl-8 pr-3 text-sm bg-opacity-5 bg-white text-white placeholder:text-opacity-40 placeholder:text-white rounded-md focus:outline-none focus:ring-1 focus:ring-opacity-20 focus:ring-white"
-                    onClick={() => setSearchOpen(true)}
-                  />
+              <div className="relative flex items-center">
+                <div className="absolute left-2 flex items-center justify-center w-4 h-4">
+                  <Search className="w-4 h-4 text-opacity-40 text-white" />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search for campaigns, influencers..."
+                  className="w-full h-8 pl-8 pr-3 text-sm bg-opacity-5 bg-white text-white placeholder:text-opacity-40 placeholder:text-white rounded-md focus:outline-none focus:ring-1 focus:ring-opacity-20 focus:ring-white"
+                  onClick={() => setSearchOpen(true)}
+                />
                 </div>
               </div>
             </div>
@@ -553,12 +554,17 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <button
-                onClick={toggleSidebar}
-                className="flex items-center justify-center text-opacity-60 text-white hover:text-opacity-100 transition-colors"
-              >
-                {sidebarOpen ? <PanelRightOpen size={18} /> : <PanelRightClose size={18} />}
-              </button>
+              <div className="relative group">
+                <button
+                  onClick={toggleSidebar}
+                  className="flex items-center justify-center text-opacity-60 text-white hover:text-opacity-100 transition-colors"
+                >
+                  {sidebarOpen ? <PanelRightOpen size={18} /> : <PanelRightClose size={18} />}
+                </button>
+                <div className="absolute left-1/2 -translate-x-1/2 -top-8 px-2 py-1 bg-[#141415] text-xs text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-opacity-10 border-white">
+                  {sidebarOpen ? 'Close sidebar' : 'Open sidebar'}
+                </div>
+              </div>
               <div>
                 <h1 className="text-xl font-semibold">
                   Hi Alessandra,{' '}

@@ -228,7 +228,7 @@ function AlertCard({ alert }: { alert: Alert }) {
 
       <Toast 
         message={toastMessage} 
-        isVisible={showToast}
+        isVisible={showToast} 
       />
     </>
   );
@@ -237,10 +237,10 @@ function AlertCard({ alert }: { alert: Alert }) {
 export default function AIActionCenter() {
   return (
     <section>
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-xs font-medium uppercase text-opacity-60 text-white">Pulse AI Action Center</h2>
-          <p className="text-sm text-opacity-40 text-white mt-1">Smart insights and recommendations</p>
+          <h2 className="text-xs font-semibold tracking-wide uppercase text-opacity-80 text-white">Pulse AI Action Center</h2>
+          <p className="text-sm text-opacity-60 text-white mt-1.5">Smart insights and recommendations</p>
         </div>
         <div className="flex items-center space-x-2">
           <button className="text-xs text-opacity-60 text-white hover:text-white flex items-center gap-1.5">
