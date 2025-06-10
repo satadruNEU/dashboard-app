@@ -40,7 +40,7 @@ const navigation = [
   { name: 'Settings', icon: Settings, href: '#', active: false },
 ];
 
-function ProfileDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function ProfileDropdown({ isOpen, onClose, onLogout }: { isOpen: boolean; onClose: () => void; onLogout: () => void }) {
   if (!isOpen) return null;
 
   return (
@@ -128,7 +128,10 @@ function ProfileDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
         <div className="h-px bg-opacity-10 bg-white"></div>
 
         <div className="p-1.5">
-          <button className="flex h-8 w-full items-center gap-3 px-1.5 text-sm text-white hover:bg-opacity-5 hover:bg-white rounded-md transition-colors">
+          <button 
+            onClick={onLogout}
+            className="flex h-8 w-full items-center gap-3 px-1.5 text-sm text-white hover:bg-opacity-5 hover:bg-white rounded-md transition-colors"
+          >
             <LogOut className="w-4 h-4 text-opacity-60" />
             <span>Sign Out</span>
           </button>
@@ -374,7 +377,7 @@ function SearchDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
   );
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, onLogout }: { children: React.ReactNode; onLogout: () => void }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [profileOpen, setProfileOpen] = useState(false);
   const [teamOpen, setTeamOpen] = useState(false);
@@ -383,6 +386,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const handleLogout = () => {
+    setProfileOpen(false);
+    onLogout();
   };
 
   return (
@@ -506,6 +514,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <ProfileDropdown 
             isOpen={profileOpen} 
             onClose={() => setProfileOpen(false)} 
+            onLogout={handleLogout}
           />
         )}
         {teamOpen && (
