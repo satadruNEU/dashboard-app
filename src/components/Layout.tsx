@@ -577,9 +577,9 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
                     onMouseOver={(e) => e.currentTarget.style.color = '#FCD34D'}
                     onMouseOut={(e) => e.currentTarget.style.color = '#FBBF24'}
                   >
-                    3 alert
+                    3 alerts
                   </a>
-                  {' '}needs your attention
+                  {' '}need your attention
                 </h1>
               </div>
             </div>
