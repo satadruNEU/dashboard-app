@@ -27,8 +27,10 @@ import {
   Info,
   Hash,
   User,
-  Image
+  Image,
+  X
 } from 'lucide-react';
+import AIActionCenter from './AIActionCenter';
 
 const navigation = [
   { name: 'Dashboard', icon: Home, href: '#', active: true },
@@ -384,6 +386,7 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
   const [teamOpen, setTeamOpen] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [aiActionCenterOpen, setAIActionCenterOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -536,6 +539,28 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
             onClose={() => setSearchOpen(false)} 
           />
         )}
+        {aiActionCenterOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="bg-[#141415] border border-opacity-10 border-white rounded-lg w-full max-w-3xl p-6"
+              style={{backgroundColor: '#141415'}}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-white">Take quick actions with Pulse AI</h3>
+                <button 
+                  onClick={() => setAIActionCenterOpen(false)} 
+                  className="p-1 text-opacity-60 text-white hover:text-opacity-100 transition-colors"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              <AIActionCenter />
+            </motion.div>
+          </div>
+        )}
       </AnimatePresence>
 
       {/* Main content */}
@@ -568,8 +593,8 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
               <div>
                 <h1 className="text-xl font-semibold">
                   Hi Alessandra,{' '}
-                  <a 
-                    href="#" 
+                  <button 
+                    onClick={() => setAIActionCenterOpen(true)}
                     style={{ 
                       color: '#FBBF24',
                       transition: 'color 0.2s ease'
@@ -578,7 +603,7 @@ export default function Layout({ children, onLogout }: { children: React.ReactNo
                     onMouseOut={(e) => e.currentTarget.style.color = '#FBBF24'}
                   >
                     3 alerts
-                  </a>
+                  </button>
                   {' '}need your attention
                 </h1>
               </div>
