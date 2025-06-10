@@ -571,6 +571,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button 
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-button-bg border border-button-border hover:bg-button-hover transition-colors"
               style={{ borderRadius: '6px'}}
+              onClick={() => window.open('https://music-app-478r.vercel.app/', '_blank')}
             >
               <PlusIcon className='w-3.5 h-3.5' />
               Start New Campaign
