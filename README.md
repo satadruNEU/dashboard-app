@@ -1,10 +1,10 @@
-# Influur Dashboard
+# Influencer Management Dashboard
 
 A modern, responsive dashboard built with React, TypeScript, and Vite. This dashboard is optimized for screen widths between 1360px and 1440px.
 
 ## Live Demo
 
-The dashboard is deployed and available at: [https://dashboard-app-inf.vercel.app/](https://dashboard-app-inf.vercel.app/)
+The dashboard is deployed and available at: [https://dashboard-app-qwerty.vercel.app/](https://dashboard-app-qwerty.vercel.app/)
 
 ## Features
 
