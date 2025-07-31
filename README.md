@@ -1,6 +1,7 @@
 # Influencer Management Dashboard
 
 A modern, responsive dashboard built with React, TypeScript, and Vite. This dashboard is optimized for screen widths between 1360px and 1440px.
+Login is dummy with error validations.
 
 ## Live Demo
 
