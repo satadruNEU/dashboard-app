@@ -5,7 +5,7 @@ Login is dummy with error validations.
 
 ## Live Demo
 
-The dashboard is deployed and available at: [https://dashboard-app-qwerty.vercel.app/](https://dashboard-app-qwerty.vercel.app/)
+The dashboard is deployed and available at: https://dashboard-app-orcin-tau.vercel.app/
 
 ## Features
 
